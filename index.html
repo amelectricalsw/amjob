@@ -15,6 +15,6 @@
 <div class="seg"><label><input type="radio" name="Pricing" value="Total" checked onchange="m()"><span>Total amount</span></label><label><input type="radio" name="Pricing" value="Labour + Materials" onchange="m()"><span>Labour + Materials</span></label></div>
 <div id="t"><label>Total amount £ (ex VAT) *<input name="Total ex VAT" inputmode="decimal" required></label></div>
 <div id="s" hidden><label>Labour cost £ (ex VAT) *<input name="Labour ex VAT" inputmode="decimal"></label><label>Material cost £ (ex VAT) *<input name="Materials ex VAT" inputmode="decimal"></label></div>
-<button>Submit</button></form>
+<button>Submit</button></form><a href="booking/" style="display:block;text-align:center;margin:20px 0;font-size:16px;color:#111">Booking in a new job? Use the booking form →</a>
 <script>document.forms[0].addEventListener("submit",function(){subj.value="New job for invoicing - "+document.querySelector("[name=\"Customer name\"]").value});function m(){var s=document.querySelector('input[value="Total"]').checked;t.hidden=!s;window.s.hidden=s;t.querySelector('input').required=s;window.s.querySelectorAll('input').forEach(function(i){i.required=!s})}</script>
 </body></html>
